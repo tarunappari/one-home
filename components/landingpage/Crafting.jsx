@@ -102,13 +102,13 @@ const Crafting = () => {
                     </div>
                 </div>
                 <div className={styles.strokeText}>
-                    <h2 className={styles.xText}> MODERN</h2>
+                    <h2 className={styles.xText}> Modern</h2>
                     <h2
                         className={styles.xText2}
                         style={{ alignSelf: "flex-end", marginTop: "-4rem" }}
                     >
                         {" "}
-                        LUXURY
+                        Luxury
                     </h2>
                 </div>
                 <div className={styles.descContainer}>

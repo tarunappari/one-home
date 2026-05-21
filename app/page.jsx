@@ -5,6 +5,8 @@ import About from "@/components/landingpage/About";
 import ShowCase from "@/components/landingpage/ShowCase";
 import Crafting from "@/components/landingpage/Crafting";
 import ImagesScroll from "@/components/landingpage/ImagesScroll";
+import RelaxationTimeline from "@/components/landingpage/Timeline";
+import ChinaSourcing from "@/components/landingpage/ChinaSourcing";
 
 const page = () => {
   return (
@@ -14,7 +16,9 @@ const page = () => {
       <About />
       <Crafting />
       <ShowCase />
-      <ImagesScroll />
+      {/* <ImagesScroll /> */}
+      <RelaxationTimeline />
+      <ChinaSourcing />
     </div>
   );
 };

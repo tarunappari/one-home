@@ -1,0 +1,141 @@
+.container {
+    overflow: hidden !important;
+    margin-top: 3rem;
+
+    h4 {
+        font-family: 'greatvibes';
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--woodBrown);
+        margin-bottom: -3rem;
+        word-spacing: 0.5rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .timelineContainer {
+        display: flex;
+
+
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-align: center;
+        }
+    }
+
+    .testimonialContainer {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        margin-top: 2rem;
+
+        .timelineTitle {
+            padding: 3rem;
+        }
+
+        .timeline {
+            position: relative;
+            cursor: pointer;
+
+            .quote {
+                position: absolute;
+                top: 2rem;
+                left: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .container {
+        grid-template-columns: 100%;
+
+        .titleContainer {
+            align-items: center;
+            padding-left: 0rem;
+
+            h2 {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.05rem;
+                text-align: center;
+            }
+        }
+
+        .testimonialContainer {
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+
+            .timelineTitle {
+                padding: 1rem;
+            }
+
+            .timeline {
+                .quote {
+                    position: absolute;
+                    top: 3rem;
+                    left: 2rem;
+                }
+            }
+        }
+
+        .divider {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 710px) {
+    .container {
+        padding: 0.5rem;
+
+        .titleContainer {
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .timelineContainer {
+            width: 100%;
+        }
+
+        .testimonialContainer {
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+
+            .timelineTitle {
+                display: none;
+            }
+
+            .timeline {
+                .quote {
+                    position: absolute;
+                    top: 3rem;
+                    left: 2rem;
+                }
+            }
+        }
+
+        .divider {
+            width: 100%;
+        }
+    }
+}
