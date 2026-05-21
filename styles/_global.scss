@@ -1,0 +1,96 @@
+@use "tailwindcss";
+
+
+@font-face {
+  font-family: "manrope";
+  src: url("/fonts/manrope.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "satoshi";
+  src: url("/fonts/satoshi.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "cormorant";
+  src: url("/fonts/cormorant.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "greatvibes";
+  src: url("/fonts/greatvibes.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #151515;
+  --para:#1A1A1A;
+  --matteBlack: #0D0D0D;
+  --ivoryWhite:#F8F6F1;
+  --beige:#D8CBB8; 
+  --champagne:#F3E8D3;
+  --softBeige: #f1f0ec;
+  --woodBrown:#6B4F3A;
+
+  --gold: #C9A227; 
+  --softGold:#D8B75B; 
+  --lightGold : #EAD9A0; 
+
+  --bgBtn:#dab76c;
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #ffffff;
+    --black: #000000;
+  }
+}
+
+
+
+html, body {
+  position: relative;
+}
+
+body {
+  background: var(--softBeige);
+  color: var(--black);
+  font-family: "satoshi", sans-serif;
+  font-optical-sizing: auto;
+}
+
+span {
+  color: var(--para);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--black);
+  font-family: "cormorant", serif;
+}
+
+p {
+  font-family:"satoshi" sans-serif ;
+  color: var(--para);
+}
+
+button,
+img,
+svg {
+  cursor: pointer !important;
+}
+
+.pageContainer{
+  overflow-x: hidden;
+}

@@ -1,0 +1,22 @@
+.demoContainer {
+  /* Added to provide any container-specific custom styles */
+  background-color: var(--softBeige, #f1f0ec);
+}
+
+.container {
+  /* Container styles */
+  background-color: var(--softBeige, #f1f0ec);
+}
+
+.introTitle {
+  font-family: var(--font-cormorant, "cormorant", serif);
+}
+
+.contentTitle {
+  font-family: var(--font-cormorant, "cormorant", serif);
+  color: var(--black, #151515);
+}
+
+.contentDesc {
+  color: var(--para, #1A1A1A);
+}

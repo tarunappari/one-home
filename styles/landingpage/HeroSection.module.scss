@@ -1,0 +1,113 @@
+.heroContainer {
+    padding: 2rem;
+    padding-top: 7rem;
+    // min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 2rem;
+    overflow: hidden;
+
+    .heroContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        width: 70%;
+
+        span {
+            font-family: 'greatvibes';
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--woodBrown);
+            margin-bottom: -1rem;
+            word-spacing: 0.5rem;
+        }
+
+        .heroTitle {
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            text-align: center;
+
+            .imageWrap {
+                display: inline-flex;
+                vertical-align: middle;
+                margin: 0 1rem;
+
+                img {
+                    width: 5.5rem;
+                    height: 3.5rem;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                }
+            }
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+    }
+
+    .heroImageContainer {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            position: absolute;
+            top: -6rem;
+            left: 50%;
+            transform: translateX(-50%);
+
+            font-size: 15rem;
+            font-weight: 700;
+            letter-spacing: 0.5rem;
+
+            color: rgba(0, 0, 0, 0.05);
+
+            z-index: 0;
+            white-space: nowrap;
+            user-select: none;
+            pointer-events: none;
+
+            -webkit-mask-image: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 1) 0%,
+                    rgba(0, 0, 0, 0.4) 45%,
+                    rgba(0, 0, 0, 0) 100%);
+
+            mask-image: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 1) 0%,
+                    rgba(0, 0, 0, 0.4) 50%,
+                    rgba(0, 0, 0, 0) 100%);
+        }
+
+        .heromainImg {
+            width: 45rem;
+            height: 25rem;
+            z-index: 1;
+        }
+    }
+
+    .herodecor1 {
+        top: 9rem;
+        right: 0;
+        position: absolute;
+        width: 30rem;
+        height: 20rem;
+        z-index: -2;
+    }
+
+    .herodecor2 {
+        top: 35%;
+        left: 0;
+        position: absolute;
+        width: 23rem;
+        height: 15rem;
+        z-index: -2;
+    }
+}

@@ -1,0 +1,272 @@
+.showcaseSection {
+  padding:2rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+  box-sizing: border-box;
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+}
+
+.showcaseHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+
+  .subtitle {
+    font-family: 'greatvibes';
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--woodBrown);
+  }
+
+  .title {
+    font-family: "cormorant", serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--black);
+    max-width: 600px;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  p{
+    font-size: 1.1rem;
+  }
+
+  .divider {
+    width: 80px;
+    height: 3px;
+    background-color: var(--gold);
+    margin-top: 0.5rem;
+    border-radius: 2px;
+  }
+}
+
+// ----------------------------------------------------
+// Responsive Grid Container
+// ----------------------------------------------------
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  height: 500px;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    height: auto;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    gap: 1rem;
+  }
+}
+
+// ----------------------------------------------------
+// Base Card Style
+// ----------------------------------------------------
+.card {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+  background-color: var(--ivoryWhite);
+
+  @media (max-width: 768px) {
+    border-radius: 1.75rem;
+  }
+
+  // Image zoom container
+  .imageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    .cardImage {
+      object-fit: cover;
+      transition: transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+  }
+
+  // Gradient overlay for text contrast and premium feel
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(
+      to bottom,
+      rgba(13, 13, 13, 0) 0%,
+      rgba(13, 13, 13, 0.2) 45%,
+      rgba(13, 13, 13, 0.8) 100%
+    );
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+
+    @media (max-width: 768px) {
+      padding: 1.5rem 1rem 1rem 1rem;
+    }
+  }
+
+  // Card text contents
+  .cardContent {
+    color: var(--white);
+    max-width: 90%;
+    transform: translateY(0);
+    transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+
+    h3 {
+      font-family: "cormorant", serif;
+      font-size: 2.25rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      line-height: 1;
+
+      @media (max-width: 1024px) {
+        font-size: 1.85rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.3rem;
+      }
+    }
+
+    p {
+      font-family: "satoshi", sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0;
+
+      @media (max-width: 1024px) {
+        font-size: 0.88rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 0.82rem;
+        line-height: 1.3;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  // ----------------------------------------------------
+  // Hover Animations
+  // ----------------------------------------------------
+  &:hover {
+    .imageWrapper .cardImage {
+      transform: scale(1.03);
+    }
+
+    .overlay {
+      background: linear-gradient(
+        to bottom,
+        rgba(13, 13, 13, 0) 0%,
+        rgba(13, 13, 13, 0.3) 40%,
+        rgba(13, 13, 13, 0.85) 100%
+      );
+    }
+
+    .cardContent {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+// ----------------------------------------------------
+// Flat Card Coordinates (CSS Grid Positions)
+// ----------------------------------------------------
+
+// Desktop Layout
+.card-1 {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.card-2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.card-3 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.card-4 {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+// Tablet/Mobile 2-Column Grid Layout Override
+@media (max-width: 1024px) {
+  .card-1 {
+    grid-column: 1;
+    grid-row: 1;
+    height: 320px;
+  }
+
+  .card-2 {
+    grid-column: 2;
+    grid-row: 1;
+    height: 320px;
+  }
+
+  .card-3 {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    height: 240px;
+  }
+
+  .card-4 {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    height: 240px;
+  }
+}
+
+// Phone height overrides
+@media (max-width: 640px) {
+  .card-1 {
+    height: 220px;
+  }
+
+  .card-2 {
+    height: 220px;
+  }
+
+  .card-3 {
+    height: 180px;
+  }
+
+  .card-4 {
+    height: 180px;
+  }
+}
