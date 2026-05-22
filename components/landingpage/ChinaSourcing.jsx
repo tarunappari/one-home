@@ -70,7 +70,7 @@ export default function ChinaSourcing() {
                 <div className={styles.textContainer}>
                     <h2 className={styles.titleLeft}>
                         Direct Furniture Sourcing<br />
-                        From China
+                        <span>From China</span>
                     </h2>
                 </div>
 
