@@ -22,23 +22,23 @@ const About = () => {
                 <span className={styles.subtitle}>Legacy of Quality</span>
                 <h3>
                     <span className={styles.imageWrap}>
-                        <Image src={sofa1} alt="sofa" />
+                        <Image src={sofa1} alt="sofa" sizes="(max-width: 768px) 50vw, 33vw" />
                     </span>
                     For over 13 years,
                     <span className={styles.imageWrap}>
-                        <Image src={sofa2} alt="sofa" />
+                        <Image src={sofa2} alt="sofa" sizes="(max-width: 768px) 50vw, 33vw" />
                     </span>
                     we have helped customers source premium-quality furniture
                     <span className={styles.imageWrap}>
-                        <Image src={sofa3} alt="sofa" />
+                        <Image src={sofa3} alt="sofa" sizes="(max-width: 768px) 50vw, 33vw" />
                     </span>
                     with complete transparency
                     <span className={styles.imageWrap}>
-                        <Image src={sofa5} alt="sofa" />
+                        <Image src={sofa5} alt="sofa" sizes="(max-width: 768px) 50vw, 33vw" />
                     </span>
                     and trusted logistics support.
                     <span className={styles.imageWrap}>
-                        <Image src={sofa4} alt="sofa" />
+                        <Image src={sofa4} alt="sofa" sizes="(max-width: 768px) 50vw, 33vw" />
                     </span>
                 </h3>
             </div>
@@ -62,7 +62,7 @@ const About = () => {
                     {/* Top card: Aesthetic text card */}
                     <div className={styles.textCard}>
                         <div className={styles.decorWrap}>
-                            <Image src={decorlight} alt="decorlight" className={styles.light1} />
+                            <Image src={decorlight} alt="decorlight" className={styles.light1} sizes="(max-width: 768px) 50vw, 33vw" />
                         </div>
                         <h3>
                             Built On Trust,<br />
@@ -70,20 +70,20 @@ const About = () => {
                             Global Sourcing.
                         </h3>
                         <div className={styles.chairWrap}>
-                            <Image src={chairdecor} alt="chairdecor" />
+                            <Image src={chairdecor} alt="chairdecor" sizes="(max-width: 768px) 50vw, 33vw" />
                         </div>
                     </div>
 
                     {/* Bottom card: Image overlay card with arrow button */}
                     <div className={styles.imageCard}>
                         <div className={styles.decorWrap}>
-                            <Image src={decorlight2} alt="decorlight" className={styles.light1} />
+                            <Image src={decorlight2} alt="decorlight" className={styles.light1} sizes="(max-width: 768px) 50vw, 33vw" />
                         </div>
                         <div className={styles.decorWrap2}>
-                            <Image src={decorlight3} alt="decorlight" className={styles.light1} />
+                            <Image src={decorlight3} alt="decorlight" className={styles.light1} sizes="(max-width: 768px) 50vw, 33vw" />
                         </div>
                         <div className={styles.chairWrap}>
-                            <Image src={chairdecor2} alt="chairdecor" />
+                            <Image src={chairdecor2} alt="chairdecor" sizes="(max-width: 768px) 50vw, 33vw" />
                         </div>
                         <h3>
                            Redefining Modern Living &<br />

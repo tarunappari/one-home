@@ -109,6 +109,7 @@ function AnimatedImage({ pic, scrollYProgress, index }) {
                 <Image
                     src={pic.src}
                     fill
+                    sizes="(max-width: 768px) 50vw, 30vw"
                     alt={`Gallery image ${index + 1}`}
                     style={{ objectFit: 'cover' }}
                 />

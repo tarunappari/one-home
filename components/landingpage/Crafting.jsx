@@ -58,7 +58,7 @@ const Crafting = () => {
             >
                 <div className={styles.titleContainer}>
                     <div className={styles.titleContent}>
-                        <Image src={sofa1} alt="sofa" />
+                        <Image src={sofa1} alt="sofa" sizes="(max-width: 768px) 50vw, 33vw" />
                         <h1
                             style={{ marginBottom: "-1rem" }}
                         >
@@ -78,7 +78,7 @@ const Crafting = () => {
                         <p>
                             From tailored interior concepts to refined furniture collections, we create immersive living experiences that blend modern elegance with timeless comfort. Every detail is designed to elevate spaces with sophistication and purpose.
                         </p>
-                        <Image src={sofa2} alt="sofa" />
+                        <Image src={sofa2} alt="sofa" sizes="(max-width: 768px) 50vw, 33vw" />
                     </div>
                 </div>
 
@@ -94,7 +94,7 @@ const Crafting = () => {
             >
                 <div className={styles.titleContainer}>
                     <div className={styles.titleContent}>
-                        <Image src={sofa1} alt="sofa" />
+                        <Image src={sofa1} alt="sofa" sizes="(max-width: 768px) 50vw, 33vw" />
                         <motion.h1 variants={leftVariants}>
                             Crafted Experiences, <br />
                             Designing Timeless Comfort
@@ -116,7 +116,7 @@ const Crafting = () => {
                         <motion.p variants={rightVariants}>
                             From tailored interior concepts to refined furniture collections, we create immersive living experiences that blend modern elegance with timeless comfort. Every detail is designed to elevate spaces with sophistication and purpose.
                         </motion.p>
-                        <Image src={sofa2} alt="sofa" />
+                        <Image src={sofa2} alt="sofa" sizes="(max-width: 768px) 50vw, 33vw" />
                     </div>
                 </div>
                 <div className={styles.divider}></div>

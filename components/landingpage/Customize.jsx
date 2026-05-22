@@ -10,10 +10,10 @@ const Customize = () => {
     return (
         <div className={styles.container}>
             <div className={styles.decorWrap}>
-                <Image src={decorlight} alt="decorlight" className={styles.light1} />
+                <Image src={decorlight} alt="decorlight" className={styles.light1} sizes="(max-width: 768px) 50vw, 33vw" />
             </div>
             <div className={styles.decorWrap2}>
-                <Image src={decorlight2} alt="decorlight" className={styles.light2} />
+                <Image src={decorlight2} alt="decorlight" className={styles.light2} sizes="(max-width: 768px) 50vw, 33vw" />
             </div>
             <div className={styles.contentContainer}>
                 <span>Customized Interiors</span>

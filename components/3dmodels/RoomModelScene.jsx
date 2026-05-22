@@ -2,6 +2,7 @@
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Environment } from "@react-three/drei";
 import { Suspense, useEffect, useRef, useState } from "react";
+import { useInView } from "framer-motion";
 import { Room } from "./room";
 
 /**
@@ -128,9 +129,11 @@ export default function RoomModelScene() {
     };
   }, []);
 
+  const isInView = useInView(wrapperRef, { margin: "0px" });
+
   return (
     <div ref={wrapperRef} style={{ width: "100%", height: "100%" }}>
-      <Canvas shadows dpr={[1, 1.5]} camera={{ position: [25, 10, 25], fov: 35 }}>
+      <Canvas frameloop={isInView ? "always" : "demand"} shadows dpr={[1, 1.5]} camera={{ position: [25, 10, 25], fov: 35 }}>
         <Suspense fallback={null}>
           <ambientLight intensity={3} />
           
@@ -138,7 +141,7 @@ export default function RoomModelScene() {
             position={[-5, 12, 5]}
             intensity={3}
             castShadow
-            shadow-mapSize={[2048, 2048]}
+            shadow-mapSize={[1024, 1024]}
             shadow-camera-left={-20}
             shadow-camera-right={20}
             shadow-camera-top={20}

@@ -9,10 +9,10 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.decorWrap1}>
-                <Image src={decorlight1} alt="decorlight" className={styles.light1} />
+                <Image src={decorlight1} alt="decorlight" className={styles.light1} sizes="(max-width: 768px) 50vw, 33vw" />
             </div>
             <div className={styles.decorWrap2}>
-                <Image src={decorlight2} alt="decorlight" className={styles.light1} />
+                <Image src={decorlight2} alt="decorlight" className={styles.light1} sizes="(max-width: 768px) 50vw, 33vw" />
             </div>
             <div className={styles.topSection}>
                 <div className={styles.logo}>

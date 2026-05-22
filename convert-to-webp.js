@@ -22,11 +22,7 @@ async function processDirectory(dir) {
     } else {
       const ext = path.extname(file);
       if (imageExtensions.includes(ext)) {
-        // skip heromain in hero folder
-        if (filePath.includes(path.join('hero', 'heromain')) || filePath.match(/hero[\\\/]heromain/i)) {
-           console.log(`Skipping ${filePath}`);
-           continue;
-        }
+        // no skipping
 
         const webpPath = filePath.substring(0, filePath.length - ext.length) + '.webp';
         console.log(`Converting ${filePath} to ${webpPath}`);
@@ -77,10 +73,6 @@ function updateReferences(dir) {
              const regex = new RegExp('\\' + imgExt, 'gi');
              const originalContent = content;
              content = content.replace(regex, (match, offset, string) => {
-                 const lookbehind = string.substring(Math.max(0, offset - 15), offset);
-                 if (lookbehind.toLowerCase().includes('heromain')) {
-                     return match; // keep original extension
-                 }
                  return '.webp';
              });
              if (originalContent !== content) {
