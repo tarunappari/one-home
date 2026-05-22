@@ -1,0 +1,96 @@
+.container {
+  padding: 2rem;
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  overflow: hidden;
+
+  &>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+  }
+
+  .letsTalk{
+    margin-bottom: -1rem;
+    font-size: 4rem;
+    color: var(--woodBrown);
+  }
+
+  .letsText {
+    color: var(--black);
+    font-family: 'greatvibes';
+    color: var(--woodBrown);
+    padding: 1rem;
+  }
+
+  .togetherContainer {
+    padding: 1rem;
+    margin-top: -1rem;
+  }
+
+  .togetherText {
+    font-weight: 700;
+    font-size: 6rem;
+    font-family: 'greatvibes';
+    padding: 1rem;
+  }
+
+  .decor {
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--woodBrown) 100%);
+    margin: 2rem 0;
+    margin-top: 3rem;
+  }
+
+  .iconsContainer {
+    a {
+      transition: 0.2s all;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: 0;
+
+    .togetherText {
+      color: var(--woodBrown);
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 558px) {
+  .container {
+    margin-left: 0;
+    padding: 0.5rem;
+    margin-top: 2rem;
+
+    &>div {
+      justify-content: center;
+      margin-left: 0.25rem;
+      height: 15rem;
+    }
+
+    .decor {
+      display: none;
+    }
+
+    .iconsContainer {
+      a {
+        transition: 0.2s all;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

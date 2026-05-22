@@ -12,6 +12,7 @@ import RoomModelScene from "@/components/3dmodels/RoomModelScene";
 import Customize from "@/components/landingpage/Customize";
 import CTASection from "@/components/landingpage/CTASection";
 import Footer from "@/components/common/Footer";
+import Contact from "@/components/landingpage/Contact";
 
 const page = () => {
   return (
@@ -26,6 +27,7 @@ const page = () => {
       <ChinaSourcing />
       <Customize />
       <CTASection />
+      <Contact />
       <Footer />
     </div>
   );

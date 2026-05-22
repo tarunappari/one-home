@@ -2,7 +2,7 @@ import styles from '@/styles/landingpage/CTASection.module.scss';
 import ChairModelScene from '../3dmodels/ChairModelScene';
 import { Mail } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
-import decorlight from '@/public/assets/decor/decorlights.webp'
+import decorlight from '@/public/assets/decor/decorlights3.webp'
 import Image from 'next/image';
 
 const CTASection = () => {
