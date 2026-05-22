@@ -1,3 +1,4 @@
+'use client';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState, useMemo } from 'react';
 
@@ -89,7 +90,7 @@ const BlurReveal = ({
       transition={{
         duration: totalDuration,
         times,
-        delay: delay / 1000,
+        delay: delay,
         ease: easing,
       }}
       onAnimationComplete={onAnimationComplete}

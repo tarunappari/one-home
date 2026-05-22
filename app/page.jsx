@@ -1,18 +1,16 @@
-
+import dynamic from 'next/dynamic';
 import Navbar from "@/components/common/Navbar";
 import HeroSection from "@/components/landingpage/HeroSection";
-import About from "@/components/landingpage/About";
-import ShowCase from "@/components/landingpage/ShowCase";
 
-import Crafting from "@/components/landingpage/Crafting";
-import ImagesScroll from "@/components/landingpage/ImagesScroll";
-import RelaxationTimeline from "@/components/landingpage/Timeline";
-import ChinaSourcing from "@/components/landingpage/ChinaSourcing";
-import RoomModelScene from "@/components/3dmodels/RoomModelScene";
-import Customize from "@/components/landingpage/Customize";
-import CTASection from "@/components/landingpage/CTASection";
-import Footer from "@/components/common/Footer";
-import Contact from "@/components/landingpage/Contact";
+const About = dynamic(() => import("@/components/landingpage/About"));
+const ShowCase = dynamic(() => import("@/components/landingpage/ShowCase"));
+const Crafting = dynamic(() => import("@/components/landingpage/Crafting"));
+const RelaxationTimeline = dynamic(() => import("@/components/landingpage/Timeline"));
+const ChinaSourcing = dynamic(() => import("@/components/landingpage/ChinaSourcing"));
+const Customize = dynamic(() => import("@/components/landingpage/Customize"));
+const CTASection = dynamic(() => import("@/components/landingpage/CTASection"));
+const Contact = dynamic(() => import("@/components/landingpage/Contact"));
+const Footer = dynamic(() => import("@/components/common/Footer"));
 
 const page = () => {
   return (

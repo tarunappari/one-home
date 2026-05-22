@@ -18,11 +18,11 @@
         gap: 1rem;
         width: 70%;
 
-        span {
+        .span {
             font-family: 'greatvibes';
             font-size: 2.5rem;
             font-weight: 700;
-            color: var(--woodBrown);
+            color: var(--woodBrown) !important;
             margin-bottom: -1rem;
             word-spacing: 0.5rem;
         }
@@ -47,8 +47,8 @@
             }
         }
 
-        p {
-            font-size: 1.1rem;
+        .p {
+            font-size: 1.15rem;
         }
     }
 
