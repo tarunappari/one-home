@@ -1,4 +1,4 @@
-.container{
+.container {
     height: 90vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -23,12 +23,12 @@
         width: 25rem;
     }
 
-    & > div{
+    &>div {
         height: 100%;
         width: 100%;
     }
 
-    .contentContainer{
+    .contentContainer {
         padding: 2rem;
         padding-left: 5rem;
         display: flex;
@@ -36,19 +36,19 @@
         align-items: flex-start;
         justify-content: center;
 
-        span{
+        span {
             font-size: 2.5rem;
             color: var(--woodBrown);
             font-family: 'greatvibes';
             margin-bottom: -1rem;
         }
 
-        h2{
+        h2 {
             font-size: 3rem;
             font-weight: 700;
         }
 
-        p{
+        p {
             font-size: 1.1rem;
             margin-bottom: 1rem;
         }
@@ -86,6 +86,101 @@
                 margin: 0;
                 color: #1a1a1a;
             }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .container {
+        height: auto;
+        grid-template-columns: 1fr;
+        width: 100%;
+
+        .decorWrap {
+            top: 50%;
+            width: 15rem;
+            height: 7rem;
+        }
+
+        .decorWrap2 {
+            top: 35%;
+            width: 20rem;
+        }
+
+        .contentContainer {
+            padding: 2rem;
+            padding-left: 2rem;
+        }
+
+        .modelContainer {
+            margin-top: -8rem;
+            height: 30rem;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        .decorWrap {
+            top: 50%;
+            width: 15rem;
+        }
+
+        .decorWrap2 {
+            top: 38%;
+            width: 16rem;
+        }
+
+        &>div {
+            height: 100%;
+            width: 100%;
+        }
+
+        .contentContainer {
+            padding: 2rem;
+            padding-left: 1.5rem;
+
+            span {
+                font-size: 1.75rem;
+                margin-bottom: -0.25rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+                font-weight: 700;
+            }
+
+            p {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .points {
+            gap: 0.5rem;
+
+            .point {
+                gap: 0.5rem;
+
+                .iconWrapper {
+                    width: 40px;
+                    height: 40px;
+
+                    svg {
+                        width: 22px;
+                        height: 22px;
+                    }
+                }
+
+                h3 {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .modelContainer {
+            margin-top: -4rem;
+            height: 25rem;
         }
     }
 }

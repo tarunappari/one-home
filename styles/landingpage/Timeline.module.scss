@@ -139,3 +139,59 @@
         }
     }
 }
+
+
+@media (max-width: 650px) {
+    .container {
+        padding: 0.25rem;
+
+        h3 {
+            text-align: left !important;
+            margin-top: -0.5rem;
+            margin-bottom: -0.5rem;
+            font-size: 1.3rem !important;
+        }
+
+        .titleContainer {
+
+            h4{
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 2.25rem;
+                line-height: 1;
+                margin-top: 3rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .timelineContainer {
+            width: 100%;
+        }
+
+        .testimonialContainer {
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+
+            .timelineTitle {
+                display: none;
+            }
+
+            .timeline {
+                .quote {
+                    position: absolute;
+                    top: 3rem;
+                    left: 2rem;
+                }
+            }
+        }
+
+        .divider {
+            width: 100%;
+        }
+    }
+}

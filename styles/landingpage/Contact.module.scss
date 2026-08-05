@@ -12,29 +12,31 @@
     padding-bottom: 2rem;
   }
 
-  .letsTalk{
+  .letsTalk {
     margin-bottom: -1rem;
     font-size: 4rem;
     color: var(--woodBrown);
   }
 
   .letsText {
-    color: var(--black);
     font-family: 'greatvibes';
     color: var(--woodBrown);
-    padding: 1rem;
+    padding: 0;
+    font-size: 4.5rem;
+    white-space: nowrap;
   }
 
   .togetherContainer {
-    padding: 1rem;
-    margin-top: -1rem;
+    padding: 0;
+    margin-top: -1.5rem;
   }
 
   .togetherText {
     font-weight: 700;
-    font-size: 6rem;
+    font-size: 4.5rem;
     font-family: 'greatvibes';
-    padding: 1rem;
+    padding: 0;
+    white-space: nowrap;
   }
 
   .decor {
@@ -60,10 +62,26 @@
   .container {
     margin-left: 0;
 
-    .togetherText {
-      color: var(--woodBrown);
-      font-weight: 500;
+    .letsText {
+      padding: 0;
+      font-size: 3rem;
+      white-space: nowrap;
     }
+
+    .togetherContainer {
+      padding: 0;
+      margin-top: -0.5rem;
+    }
+
+    .togetherText {
+      font-size: 3rem;
+      padding: 0;
+    }
+
+    .letsTalk {
+      font-size: 2rem;
+    }
+
   }
 }
 
@@ -78,6 +96,7 @@
       margin-left: 0.25rem;
       height: 15rem;
     }
+
 
     .decor {
       display: none;

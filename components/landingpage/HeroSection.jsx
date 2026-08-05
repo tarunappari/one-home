@@ -30,7 +30,6 @@ const HeroSection = () => {
             World-Class Furniture To <br />
 
 
-
             Modern
             <span className={styles.imageWrap}>
               <Image src={herotext2} alt="sofa" priority sizes="(max-width: 768px) 100vw, 50vw" />

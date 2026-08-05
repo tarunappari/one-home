@@ -60,9 +60,7 @@
   }
 }
 
-// ----------------------------------------------------
-// Main Left Card
-// ----------------------------------------------------
+
 .mainCard {
   position: relative;
   height: 550px;
@@ -95,9 +93,6 @@
   }
 }
 
-// ----------------------------------------------------
-// Right Stacked Side Cards
-// ----------------------------------------------------
 .sideCardsContainer {
   display: flex;
   flex-direction: column;
@@ -109,7 +104,6 @@
   }
 }
 
-// Top text card
 .textCard {
   background-color: var(--ivoryWhite);
   border-radius: 2.5rem;
@@ -155,7 +149,6 @@
 
 }
 
-// Bottom image card
 .imageCard {
   background-color: var(--ivoryWhite);
   border-radius: 2.5rem;
@@ -204,5 +197,109 @@
       transform: scale(1.02);
     }
 
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    margin-top: -10rem;
+  }
+
+  .aboutHeading {
+    gap: 1rem;
+    width: 100%;
+    padding: 0 0 2rem 0;
+
+    .subtitle {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+
+      .imageWrap {
+        margin: 0 0rem;
+
+        img {
+          width: 4.5rem;
+          height: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+
+  .aboutHeading {
+    gap: 1rem;
+    width: 100%;
+    padding: 0 0 2rem 0;
+
+    .subtitle {
+      font-size: 2rem;
+      margin-bottom: 0rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+
+      .imageWrap {
+        margin: 0 0rem;
+
+        img {
+          width: 4.5rem;
+          height: 3rem;
+        }
+      }
+    }
+  }
+
+  .mainCard {
+    height: 260px;
+    border-radius: 1.5rem;
+  }
+
+  .textCard {
+    border-radius: 2rem;
+    height:auto;
+
+    .decorWrap {
+      top: -0.5rem;
+      left: 0;
+      width: 3rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    .chairWrap {
+      width: 12rem;
+    }
+
+  }
+
+  .imageCard {
+    border-radius: 2rem;
+    height: auto;
+
+    h3 {
+      font-size: 1.1rem;
+      text-align: right;
+    }
+
+    .chairWrap {
+      width: 15rem;
+
+    }
+
+    &:hover {
+      .chairWrap {
+        transform: scale(1.02);
+      }
+
+    }
   }
 }

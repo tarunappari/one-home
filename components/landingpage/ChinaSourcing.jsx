@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import styles from '../../styles/landingpage/ChinaSourcing.module.scss';
@@ -12,6 +12,13 @@ const pictures = [
         height: '14vw',
         start: { x: '8vw', y: '-12vh', scale: 0.95 },
         end: { x: '15vw', y: '-35vh', scale: 1 },
+        // Adjust these values below for the Mobile view!
+        mobile: {
+            width: '30vw',
+            height: '18vw',
+            start: { x: '5vw', y: '-14vh', scale: 0.95 },
+            end: { x: '25vw', y: '-38vh', scale: 1 },
+        }
     },
     {
         src: '/assets/china/china2.webp', // white round chair
@@ -19,6 +26,12 @@ const pictures = [
         height: '18vw',
         start: { x: '-12vw', y: '5vh', scale: 0.9 },
         end: { x: '-33vw', y: '0vh', scale: 0.9 },
+        mobile: {
+            width: '32vw',
+            height: '21vw',
+            start: { x: '-8vw', y: '6vh', scale: 0.9 },
+            end: { x: '-33vw', y: '-18vh', scale: 0.9 },
+        }
     },
     {
         src: '/assets/china/china3.webp', // gallery
@@ -26,6 +39,12 @@ const pictures = [
         height: '16vw',
         start: { x: '12vw', y: '10vh', scale: 0.8 },
         end: { x: '30vw', y: '30vh', scale: 0.8 },
+        mobile: {
+            width: '41vw',
+            height: '25vw',
+            start: { x: '8vw', y: '12vh', scale: 0.8 },
+            end: { x: '31vw', y: '36vh', scale: 0.8 },
+        }
     },
     {
         src: '/assets/china/china4.webp', // bathroom
@@ -33,6 +52,12 @@ const pictures = [
         height: '14vw',
         start: { x: '15vw', y: '-2vh', scale: 1 },
         end: { x: '35vw', y: '-3vh', scale: 1 },
+        mobile: {
+            width: '28vw',
+            height: '18vw',
+            start: { x: '10vw', y: '-2vh', scale: 1 },
+            end: { x: '24vw', y: '-16vh', scale: 1 },
+        }
     },
     {
         src: '/assets/china/china5.webp', // stairs
@@ -40,6 +65,12 @@ const pictures = [
         height: '14vw',
         start: { x: '0vw', y: '12vh', scale: 1 },
         end: { x: '3vw', y: '33vh', scale: 1 },
+        mobile: {
+            width: '32vw',
+            height: '20vw',
+            start: { x: '0vw', y: '14vh', scale: 1 },
+            end: { x: '2vw', y: '19vh', scale: 1 },
+        }
     },
     {
         src: '/assets/china/china6.webp', // stairs with curved wall
@@ -47,6 +78,12 @@ const pictures = [
         height: '16vw',
         start: { x: '-5vw', y: '15vh', scale: 0.8 },
         end: { x: '-22vw', y: '36vh', scale: 0.8 },
+        mobile: {
+            width: '35vw',
+            height: '23vw',
+            start: { x: '-3vw', y: '18vh', scale: 0.8 },
+            end: { x: '-30vw', y: '38vh', scale: 0.8 },
+        }
     },
     {
         src: '/assets/china/china7.webp', // center image (bed)
@@ -54,11 +91,26 @@ const pictures = [
         height: '15vw',
         start: { x: '0vw', y: '0vh', scale: 1.1 },
         end: { x: '-9vw', y: '-28vh', scale: 0.8 }, // push to top
+        mobile: {
+            width: '35vw',
+            height: '24vw',
+            start: { x: '0vw', y: '0vh', scale: 1.1 },
+            end: { x: '-6vw', y: '-33vh', scale: 0.8 },
+        }
     }
 ];
 
 export default function ChinaSourcing() {
     const container = useRef(null);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth <= 650);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     const { scrollYProgress } = useScroll({
         target: container,
         offset: ['start start', 'end end']
@@ -74,13 +126,14 @@ export default function ChinaSourcing() {
                     </h2>
                 </div>
 
-                <div className={styles.imagesContainer}>
+                <div className={styles.imagesContainer} key={isMobile ? 'mobile' : 'desktop'}>
                     {pictures.map((pic, index) => (
                         <AnimatedImage
                             key={index}
                             pic={pic}
                             scrollYProgress={scrollYProgress}
                             index={index}
+                            isMobile={isMobile}
                         />
                     ))}
                 </div>
@@ -89,10 +142,12 @@ export default function ChinaSourcing() {
     );
 }
 
-function AnimatedImage({ pic, scrollYProgress, index }) {
-    const x = useTransform(scrollYProgress, [0, 0.6], [pic.start.x, pic.end.x]);
-    const y = useTransform(scrollYProgress, [0, 0.6], [pic.start.y, pic.end.y]);
-    const scale = useTransform(scrollYProgress, [0, 0.6], [pic.start.scale, pic.end.scale]);
+function AnimatedImage({ pic, scrollYProgress, index, isMobile }) {
+    const currentPic = isMobile && pic.mobile ? pic.mobile : pic;
+    
+    const x = useTransform(scrollYProgress, [0, 0.6], [currentPic.start.x, currentPic.end.x]);
+    const y = useTransform(scrollYProgress, [0, 0.6], [currentPic.start.y, currentPic.end.y]);
+    const scale = useTransform(scrollYProgress, [0, 0.6], [currentPic.start.scale, currentPic.end.scale]);
 
     return (
         <motion.div
@@ -100,8 +155,8 @@ function AnimatedImage({ pic, scrollYProgress, index }) {
             style={{
                 x,
                 y,
-                width: pic.width,
-                height: pic.height,
+                width: currentPic.width,
+                height: currentPic.height,
                 zIndex: 10 - index
             }}
         >

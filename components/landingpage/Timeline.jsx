@@ -31,7 +31,7 @@ function Timeline({ items, variant = "default", showConnectors = true, showTimes
     };
 
     return (
-        <div className={` relative flex flex-col md:flex-row ${getVariantGap()} md:items-start md:justify-between w-full`}>
+        <div className={` relative flex flex-col md:flex-row ${getVariantGap()} md:items-start md:justify-between mx-auto w-fit md:w-full`}>
             {items.map((item, index) => (
                 <div key={item.id} className="relative flex md:flex-col md:items-center min-w-0 md:flex-1 flex-row gap-3 md:gap-0 pb-2 md:pb-0">
                     {/* Connector Line - Vertical for mobile, Horizontal for desktop */}
@@ -39,7 +39,7 @@ function Timeline({ items, variant = "default", showConnectors = true, showTimes
                         <>
                             {/* Mobile: Vertical connector */}
                             <div
-                                className="absolute left-3 top-9 h-full w-px md:hidden"
+                                className="absolute left-6 top-3 h-full w-px md:hidden"
                                 style={{
                                     backgroundColor:
                                         item.status === "completed"
@@ -155,7 +155,7 @@ export default function RelaxationTimeline() {
 
     return (
         <div className={`${styles.container} `}>
-            <div>
+            <div className={styles.titleContainer}>
                 <h4>Importing made easy.</h4>
                 <h2>A Seamless Import Experience</h2>
             </div>

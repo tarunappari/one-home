@@ -40,7 +40,7 @@ export function LetsWorkTogether() {
 
     return (
         <section className="flex px-6">
-            <div className="relative flex flex-col items-center gap-12">
+            <div className="relative flex flex-col items-center justify-center gap-12 min-h-[300px] w-full">
                 {/* Success state */}
                 <div
                     className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-8 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
@@ -192,7 +192,7 @@ export function LetsWorkTogether() {
                                     : "translateY(0) scale(1)",
                             }}
                         >
-                            <span className="block overflow-hidden">
+                            <span className="block py-2">
                                 <span
                                     className={`block transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${styles.letsText} `}
                                     style={{
@@ -205,7 +205,7 @@ export function LetsWorkTogether() {
                                     Let’s Design
                                 </span>
                             </span>
-                            <span className={`block overflow-hidden ${styles.togetherContainer}`}>
+                            <span className={`block pb-4 ${styles.togetherContainer}`}>
                                 <span
                                     className="block transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] delay-75"
                                     style={{
@@ -220,7 +220,7 @@ export function LetsWorkTogether() {
                             </span>
                         </p>
 
-                        <div className="relative mt-4 flex size-16 items-center justify-center sm:size-20">
+                        <div className="relative mt-4 flex size-16 shrink-0 items-center justify-center sm:size-20">
                             <div
                                 className="pointer-events-none absolute inset-0 rounded-full border transition-all ease-out"
                                 style={{
